@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer - Versão 2.0 - Pomodoro</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <script type="module" src="./src/main.js" defer></script>
+
+</head>
+<body>
+    <div id="app">
+        
+        <button id="toggle-mode">
+        <span class="sr-only">Ativar light mode</span>
+        <i class="ph ph-sun"></i>
+        <i class="ph ph-moon"></i>
+        </button>
+
+    <div id="timer-controls" >
+        <section id="timer">
+            <span id="minutes">25</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+        </section>
+
+        <section id="controls">
+            <button 
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                <span class="sr-only">Iniciar contador</span>
+            </button>
+            <button 
+                data-action="toggleRunning"
+                class="ph ph-pause-circle secondary">
+                <span class="sr-only">Pausar contador</span>
+            </button>
+            <button 
+                data-action="reset"
+                id="stop-button"
+                class="ph ph-stop-circle">
+                <span class="sr-only">Reiniciar contador</span>
+            </button>
+            <button
+                data-action="add"
+                class="ph ph-plus-circle">
+                <span class="sr-only">Adicionar 5 minutos ao contador</span>
+            </button>
+            <button
+                data-action="subtract"
+                class="ph ph-minus-circle">
+                <span class="sr-only">Subtrair 5 minutos ao contador</span>
+            </button>
+        </section>
+    </div>
+
+    <div class="music-controls">
+        <section id="sounds">
+            <button 
+                data-action="toggleMusic"
+                id="soundForest"
+                class="ph ph-tree">
+                <span class="sr-only">Som de floresta</span>
+            </button> 
+            <button 
+                data-action="toggleMusic"
+                id="soundRain"
+                class="ph ph-cloud-rain">
+                <span class="sr-only">Som de chuva</span>
+            </button> 
+            <button 
+                data-action="toggleMusic"
+                id="soundStore"
+                class="ph ph-storefront">
+                <span class="sr-only">Som de cafeteria</span>
+            </button> 
+            <button 
+                data-action="toggleMusic"
+                id="soundFire"
+                class="ph ph-fire">
+                <span class="sr-only">Som de lareira</span>
+            </button> 
+        </section>
+    </div>
+</div>
+</body>
+</html>
